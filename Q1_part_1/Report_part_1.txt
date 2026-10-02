@@ -1,0 +1,25 @@
+Part 1: Sales and Profitability Analysis
+
+I merged the two datasets (List of Orders and Order Details) on Order ID using an inner join. After merging I calculated total sales, average profit per order, and profit margin for each category.
+
+Here are the results:
+
+Electronics - Total Sales: 1,65,267 | Avg Profit/Order: 51.44 | Margin: 6.35%
+Clothing    - Total Sales: 1,39,054 | Avg Profit/Order: 28.40 | Margin: 8.03%
+Furniture   - Total Sales: 1,27,181 | Avg Profit/Order: 12.35 | Margin: 1.81%
+
+Top performer: Electronics
+Electronics has the highest total sales (1,65,267) and the highest average profit per order (51.44). This is probably because electronics items like phones and printers are expensive, so each order brings in a lot of revenue. But if you look at profit margin, it is 6.35% which is actually less than Clothing. So even though electronics makes the most money overall, it is not the most efficient category.
+
+Best margin: Clothing
+Clothing has the best profit margin at 8.03%. But its total sales and average profit per order are lower than Electronics. Clothing items are cheaper so each order doesn't bring in as much revenue, but the company keeps more profit from each rupee of sales. Basically clothing is more efficient but electronics makes more money in absolute terms.
+
+Underperformer: Furniture
+Furniture is clearly the weakest. Its profit margin is only 1.81% and average profit per order is just 12.35. The likely reasons are high material and shipping costs (furniture is heavy and bulky), and people don't buy furniture very often. These costs eat into most of the profit.
+
+Sub-Category Analysis:
+To understand WHY furniture is doing so bad, I went one level deeper and looked at sub-categories. What I found is that the problem is not with all furniture items. Chairs, Bookcases, and Furnishings are actually making decent profit. The real problem is Tables - they have a deeply negative margin of around -16%. That means for every 100 rupees of table sales, the company is LOSING 16 rupees.
+
+Similarly in Electronics, Electronic Games also have a negative margin. But the rest of Electronics sub-categories like Phones and Printers are doing fine which is why Electronics overall still has good numbers.
+
+So the takeaway is - instead of saying "furniture category is bad", the company should specifically look at Tables and figure out why they are losing so much money. Maybe the pricing is wrong, or the supplier costs are too high, or there are too many discounts being given on tables.

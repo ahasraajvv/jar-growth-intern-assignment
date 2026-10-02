@@ -1,0 +1,35 @@
+Part 2: Target Achievement Analysis
+
+I filtered the Sales Target dataset for only the Furniture category and calculated the month-over-month percentage change in target sales using pct_change().
+
+One issue I ran into - the "Month of Order Date" column had a date parsing problem. Excel had stored the year values (18, 19) in the day field instead of the year field. So "Apr-18" was being read as April 18th instead of April 2018. I fixed this programmatically by extracting the day value, adding 2000 to it, and reconstructing the dates properly.
+
+After fixing the dates, here is what I found:
+
+The Furniture sales targets increase in a very smooth, almost straight line from 10,400 (Apr-18) to 11,800 (Mar-19). Each month the target goes up by roughly 100-200 units. The biggest monthly jumps are in Jul-18 (1.89% increase), Nov-18 (1.80%), and Mar-19 (1.72%). But honestly even these "big" jumps are small - less than 2%.
+
+So the targets themselves don't have any major fluctuation. They just go up slowly and steadily.
+
+But the real interesting thing is when you compare targets vs actual sales.
+
+I merged the target data with actual Furniture sales from the orders dataset and here is what happened:
+
+The actual sales are extremely volatile compared to the smooth targets. Actual sales jump from as low as 3,622 (Jun-18) to as high as 15,944 (Jan-19). Meanwhile the targets are sitting in a narrow band of 10,400 to 11,800.
+
+Out of 12 months, the actual sales exceeded the target in only 3 months - Aug-18, Nov-18, and Jan-19. The remaining 9 months fell short. The average achievement rate across all months is just 72.6%, which means the company is consistently missing its Furniture targets by about 27%.
+
+The worst months were Jun-18 where actual was only 34% of target, and Feb-19 where it was only 40%.
+
+My Suggested Strategies:
+
+1. Set targets based on actual performance, not assumptions
+Instead of a smooth increasing line, the company should look at last 2-3 months actual sales and set the next target based on that with a small realistic growth of maybe 5-10%. Right now the targets seem disconnected from what is actually happening on the ground.
+
+2. Account for seasonal patterns
+The data clearly shows some months are strong (Aug, Nov, Jan) and some are weak (May, Jun, Feb). Instead of a flat increasing line, targets should be higher in historically strong months and lower in weak months. A simple way to do this is to look at last year's same month and adjust from there.
+
+3. Question whether aggressive Furniture targets make sense
+From Part 1 we already know Furniture has the lowest profit margin at 1.81%. Pushing high sales targets for a category that barely makes profit doesn't make much business sense. Maybe the focus should be on improving margins first (better deals with suppliers, less discounting) before trying to push volume.
+
+4. Monthly review meetings
+Instead of setting all 12 months targets at the beginning of the year, have monthly check-ins where the sales team, designers, and procurement people discuss what is working and what is not. Adjust next month's target based on current market conditions and pipeline.

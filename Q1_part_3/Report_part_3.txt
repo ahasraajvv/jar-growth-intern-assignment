@@ -1,0 +1,50 @@
+Part 3: Regional Performance Insights
+
+I grouped the merged dataset by State and found the top 5 states with the highest number of unique orders. For each of them I calculated total sales and average profit per order.
+
+Here are the top 5:
+
+Madhya Pradesh - 101 orders | Sales: 1,05,140 | Avg Profit/Order: 54.96
+Maharashtra    - 90 orders  | Sales: 95,348   | Avg Profit/Order: 68.62
+Rajasthan      - 32 orders  | Sales: 21,149   | Avg Profit/Order: 39.28
+Gujarat        - 27 orders  | Sales: 21,058   | Avg Profit/Order: 17.22
+Punjab         - 25 orders  | Sales: 16,786   | Avg Profit/Order: -24.36
+
+What I noticed from the data:
+
+Madhya Pradesh and Maharashtra are clearly the best markets. Both have high sales and high profit per order. But there is an interesting difference between the two - Maharashtra actually has HIGHER average profit per order (68.62) compared to Madhya Pradesh (54.96) even though MP has more total sales. This probably means Maharashtra customers are buying more high-margin products, or the company is giving less discounts there.
+
+Rajasthan and Gujarat are somewhere in the middle. Both have similar sales around 21,000 but Rajasthan's profit per order (39.28) is more than double of Gujarat's (17.22). Gujarat needs some investigation - why is the profit so low there compared to Rajasthan when the sales numbers are almost the same?
+
+Now the biggest problem - Punjab.
+
+Punjab has a NEGATIVE average profit of -24.36. This means the company is actually losing money on every order coming from Punjab. This is very concerning because they still have 25 orders, so it's not like one bad order is messing up the average.
+
+To understand why Punjab is losing money, I dug deeper into city level data.
+
+Punjab has only 2 cities in the data - Chandigarh and Amritsar.
+
+Chandigarh: High sales (~12,000) but deeply negative avg profit (~-25 per order)
+Amritsar: Lower sales (~4,500) but positive profit (~+35 per order)
+
+So Chandigarh is clearly the problem. Amritsar is actually doing fine.
+
+I went one more level deeper and checked what Chandigarh is selling by category:
+
+Clothing:    Sales 10,334 | Profit +1,387 (this is good)
+Furniture:   Sales 4,417  | Profit +775   (this is also fine)
+Electronics: Sales 6,391  | Profit -1,990 (THIS is the problem)
+
+So what is happening is - Chandigarh's Electronics losses (-1,990) are wiping out all the profits from Clothing (+1,387) and Furniture (+775). The net result is a loss of about -1,153 for the whole city.
+
+Basically one category (Electronics) in one city (Chandigarh) is responsible for making the entire state of Punjab loss-making.
+
+What should be prioritized:
+
+1. Chandigarh Electronics - This should be the top priority. The company needs to figure out why Electronics is losing so much money specifically in Chandigarh. Is it because of high returns? Too many discounts? Wrong product mix? This needs immediate investigation.
+
+2. Gujarat - With avg profit of only 17.22, Gujarat is underperforming compared to Rajasthan which has similar sales but much better profits. Worth looking into what is different between these two states.
+
+3. Amritsar - This is actually a positive opportunity. Amritsar is already profitable at +35 per order but has low volume. If the company runs marketing campaigns there or increases inventory, it could grow a healthy revenue stream without risk of losses.
+
+4. Maharashtra and MP - These are the company's best markets. Whatever strategies and pricing are working here should be studied and replicated in other states.
