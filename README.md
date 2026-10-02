@@ -39,7 +39,7 @@ JAR-assignment/
 ## How to Run
 ```bash
 # Install dependencies
-pip install pandas matplotlib seaborn openpyxl
+pip install pandas matplotlib openpyxl
 
 # Run each part (from the project root directory)
 python Q1_part_1/q1_part1_sales.py
@@ -54,4 +54,4 @@ python Q1_part_3/q1_part_3.py
 
 ## Tools Used
 - Python 3.x
-- pandas, matplotlib, seaborn, openpyxl
+- pandas, matplotlib, openpyxl

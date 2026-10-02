@@ -79,7 +79,6 @@ print("\n--- CITY BREAKDOWN FOR PUNJAB ---")
 print(city_breakdown)
 
 # Punjab City Analysis - Double Bar Chart
-punjab_data = merged_data[merged_data['State'] == 'Punjab']
 city_stats = punjab_data.groupby('City').agg(
     Total_Sales=('Amount', 'sum'),
     Avg_Profit=('Profit', 'mean')
